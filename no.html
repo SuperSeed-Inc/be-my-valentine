@@ -12,7 +12,27 @@
         <h1 class="text-5xl font-semibold mb-6">Oh no... 💔</h1>
         <img class="w-full max-w-xs mx-auto mt-6 rounded-lg" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWU1Z3FjYTN4a3QzMnNpanJ1OXh0M2l3dDgzYnU5NW8wMWw0eThoZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5xd6UYBLQpgQ7XBZBu/giphy.gif" alt="Sad Illustration">
         <p class="text-xl mt-6">My heart just cracked a little... but I respect your choice. 😢</p>
-        <a href="index.html" class="inline-block mt-8 px-10 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all">Go back and rethink? 🤔</a>
+        <a href="index.html">
+        <button 
+            class="px-6 py-3 bg-green-500 text-white rounded-lg shadow-lg hover:bg-red-600 transition-all">
+            Go back and rethink?
+        </button></a>
+        <button 
+            onclick="openWhatsApp(0)"
+            class="px-6 py-3 bg-green-500 text-white rounded-lg shadow-lg hover:bg-red-600 transition-all">
+            Let me know
+        </button>
     </div>
+    <script>
+        function openWhatsApp(answer) {
+            let phoneNumber = "0814675404"; // Replace with the actual phone number (no spaces, no +)
+            if(answer == 0)
+                let message = encodeURIComponent("No! I'm interested in being your valentine."); // Encode the message
+            if(answer == 1)
+                let message = encodeURIComponent("Yes!!! I will be your love to be your valentine."); // Encode the message
+            let url = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(url, "_blank"); // Open WhatsApp in a new tab
+        }
+    </script>
 </body>
 </html>
