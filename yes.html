@@ -24,7 +24,7 @@
             <button 
                 onclick="openWhatsApp(1)"
                 class="px-6 py-3 bg-green-500 text-white rounded-lg shadow-lg hover:bg-green-600 transition-all">
-                Open WhatsApp
+                Let me know
             </button>
         </div>
     </div>
@@ -34,7 +34,7 @@
             if(answer == 1)
                 let message = encodeURIComponent("No! I'm interested in being your valentine."); // Encode the message
             if(answer == 0)
-                let message = encodeURIComponent("Yes!!! I will be your forever valentine."); // Encode the message
+                let message = encodeURIComponent("Yes!!! I will be your love to be your valentine."); // Encode the message
             let url = `https://wa.me/${phoneNumber}?text=${message}`;
             window.open(url, "_blank"); // Open WhatsApp in a new tab
         }
