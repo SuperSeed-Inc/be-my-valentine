@@ -22,7 +22,7 @@
             </div>
             <p class="mt-4 text-lg">Can't wait! ❤️</p>
             <button 
-                onclick="openWhatsApp(0)"
+                onclick="openWhatsApp('yes')"
                 class="px-6 py-3 bg-green-500 text-white rounded-lg shadow-lg hover:bg-green-600 transition-all">
                 Let me know
             </button>
@@ -31,9 +31,9 @@
     <script>
         function openWhatsApp(answer) {
             let phoneNumber = "0814675404"; // Replace with the actual phone number (no spaces, no +)
-            if(answer == 1)
+            if(answer == 'yes')
                 let message = encodeURIComponent("No! I'm interested in being your valentine."); // Encode the message
-            if(answer == 0)
+            if(answer == 'no')
                 let message = encodeURIComponent("Yes!!! I will be your love to be your valentine."); // Encode the message
             let url = `https://wa.me/${phoneNumber}?text=${message}`;
             window.open(url, "_blank"); // Open WhatsApp in a new tab
