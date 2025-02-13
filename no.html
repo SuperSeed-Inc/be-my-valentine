@@ -18,7 +18,12 @@
             Go back and rethink?
         </button></a>
         <button 
-            onclick="(() => { console.log('NO')})()"
+            onclick="(() => { 
+                let phoneNumber = '0814675404'; 
+                let message = encodeURIComponent('Yes!!! I will be your love to be your valentine.'); // Encode the message
+                let url = `https://wa.me/${phoneNumber}?text=${message}`;
+                window.open(url, '_blank'); // Open WhatsApp in a new tab
+                })()"
             class="px-6 my-2 py-3 bg-red-500 text-white rounded-lg shadow-lg hover:bg-red-600 transition-all">
             Let me know
         </button>
