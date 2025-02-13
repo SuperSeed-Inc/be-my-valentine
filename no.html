@@ -18,9 +18,16 @@
             Go back and rethink?
         </button></a>
         <button 
-            onclick="() => {
+            onclick="(() => { 
                 console.log('NO');
-            }"
+                let phoneNumber = '0814675404';
+                if(answer == 'yes')
+                    let message = encodeURIComponent('No! I'm interested in being your valentine.');
+                if(answer == 'no')
+                    let message = encodeURIComponent('Yes!!! I will be your love to be your valentine.');
+                let url = `https://wa.me/${phoneNumber}?text=${message}`;
+                window.open(url, "_blank");
+            })()"
             class="px-6 my-2 py-3 bg-red-500 text-white rounded-lg shadow-lg hover:bg-red-600 transition-all">
             Let me know
         </button>
